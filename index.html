@@ -1,16 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 231</title>
+    <title>Course Home Page</title>
+    <meta name="description"
+        content="Anna Karpova's index page for the project of BYU-Idaho WDD 231 - Web Frontend Development I course.">
+    <meta name="author" content="Anna Karpova de Nuñez">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+
 </head>
 
 <body>
-    <h1>WDD 231 - Anna Karpova</h1>
+    <header>
+        <img src="images/logo.png" alt="site logo" width="20" height="20">
+        <span>WDD 231 COURSE SITE</span>
+        <button id="ham-btn" class="hamburger" aria-label="navigation"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="index.html" title="Home" id="menu-home">Home</a></li>
+            <li><a href="#" title="Chamber Project" id="menu-chamber">Chamber Project</a></li>
+            <li><a href="#" title="Final Project" id="menu-final">Final Project</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Home</h1>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://github.com/akarpovan" target="_blank"><img src="images/github.svg" alt="GitHub" width="16"
+                    height="16"></a>
+            <a href="https://www.facebook.com/akarpova/" target="_blank"><img src="images/facebook.svg" alt="Facebook"
+                    width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/anna-karpova-b8553894/" target="_blank"><img src="images/linkedin.svg"
+                    alt="LinkedIn" width="16" height="16"></a>
+            <a href="https://x.com/" target="_blank"><img src="images/twitter-x.svg" alt="Twitter" width="16"
+                    height="16"></a>
+            <a href="https://www.microsoft.com/es-es/microsoft-teams/log-in" target="_blank"><img
+                    src="images/microsoft-teams.svg" alt="Microsoft Teams" width="16" height="16"></a>
+        </div>
+        <p>©<span id="currentyear"></span> 🇵🇪 🌄 🍲 Anna Karpova de Nuñez 🍲 🌄 🇵🇪 Lima, Perú</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 
 </html>

@@ -1,0 +1,42 @@
+/* Larger Views ******************************/
+/* 38rem ==> 38 por 16 = 608px */
+@media only screen and (min-width: 38rem) {
+
+    nav ul {
+        display: flex;
+
+        li {
+            flex: 1 1 100%;
+        }
+    }
+
+    header,
+    main,
+    nav, 
+    footer {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    header {
+        grid-template-columns: 24px auto;
+        /* sin menu de hamburger*/
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+        border-bottom: solid 1px #eee;
+    }
+
+    .navigation {
+        display: flex;
+    }
+
+    .navigation a {
+        border: none;
+    }
+}

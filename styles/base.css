@@ -22,7 +22,6 @@
     --font-color: #000000;
     --white-color: white;
     --border-radius: 22px;
-    --font: "Merriweather Sans", sans-serif;
 }
 
 /* -- HEADER --  */
@@ -55,7 +54,7 @@ header span {
     font-size: 2rem;
     color: var(--primary-color);
     cursor: pointer;
-    font-family: var(--font);
+    font-family: "Merriweather Sans", sans-serif;
 }
 
 .hamburger::before {
@@ -153,7 +152,7 @@ main h1 {
 .sect h2 {
     background: var(--primary-color);
     color: var(--white-color);
-    font-family: var(--font);
+    font-family: "Merriweather Sans", sans-serif;
     font-size: 1.3rem;
     font-weight: 400;
     padding: 1rem;

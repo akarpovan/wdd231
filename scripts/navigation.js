@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         titleElement.textContent = 'HOME';
     });
 
+    /*
     //chamber
     const menuChamberLink = document.querySelector("#menu-chamber");
     menuChamberLink.addEventListener('click', () => {
@@ -28,5 +29,5 @@ document.addEventListener('DOMContentLoaded', function () {
     menuFinalLink.addEventListener('click', () => {
         titleElement.textContent = 'FINAL PROJECT';
     });
-
+    */
 });

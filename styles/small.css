@@ -1,0 +1,35 @@
+@media only screen and (max-width: 37.9rem) {
+    .sections-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .about-me {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .student-photo {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .courses-section {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-btn {
+        width: 100%;
+        /*max-width: 200px;*/
+        max-width: 100%;
+    }
+}

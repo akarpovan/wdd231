@@ -2,6 +2,23 @@
 /* 38rem ==> 38 por 16 = 608px */
 @media only screen and (min-width: 38rem) {
 
+    /*--main--*/
+    .sections-container {
+        grid-template-columns: 2fr 1fr;
+        gap: 1.5rem;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .profile-image {
+        width: 150px;
+    }
+
+    .courses-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /*-- navigation--*/
     nav ul {
         display: flex;
         flex-wrap: nowrap;

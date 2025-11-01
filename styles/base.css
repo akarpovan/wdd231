@@ -10,6 +10,15 @@
     --background-color3: #E07A5F;
     --background-color4: #f8f9fa;
     --background-color5: #dee2e6;
+    --border-complete-color: #28a745;
+    --background-color6: #f8fff9;
+    --border-pending-color: #ffc107;
+    --background-color7: #fffef0;
+    --pending-badge-color: #212529;
+    --course-item-color: #333;
+    --course-item-credits-color: #666;
+    --course-item-description-color: #555;
+    --border-social-a-color: #ccc;
     --white-color: white;
     --border-radius: 22px;
     --font: "Merriweather Sans", sans-serif;
@@ -172,12 +181,15 @@ main h1 {
     color: var(--primary-color);
     cursor: pointer;
     border-radius: 4px;
+    /*6px*/
     font-size: 1rem;
     text-align: center;
     min-height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .filter-btn.active {
@@ -185,8 +197,13 @@ main h1 {
     color: var(--white-color);
 }
 
+.filter-btn:hover {
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+
 /* Courses */
-.courses-grid {
+/*.courses-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
@@ -202,6 +219,21 @@ main h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+}*/
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.course-item {
+    padding: 1.5rem;
+    border: 2px solid var(--background-color5);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
 }
 
 .profile-image {
@@ -217,7 +249,106 @@ main h1 {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* --  Section of courses -- */
+.courses-section .sect-content {
+    display: flex;
+    flex-direction: column;
+}
 
+.credits-total {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    background-color: var(--background-color4);
+    border-radius: 4px;
+}
+
+/* Courses  completed */
+.course-item.completed {
+    border-color: var(--border-complete-color);
+    background-color: var(--background-color6);
+    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.1);
+}
+
+/* Courses pending */
+.course-item.pending {
+    border-color: var(--border-pending-color);
+    background-color: var(--background-color7);
+    box-shadow: 0 2px 8px rgba(255, 193, 7, 0.1);
+}
+
+.course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.course-header h3 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.status {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.completed-badge {
+    background-color: var(--border-complete-color);
+    color: var(--white-color);
+}
+
+.pending-badge {
+    background-color: var(--border-pending-color);
+    color: var(--pending-badge-color);
+}
+
+.course-item h4 {
+    margin: 0 0 0.5rem 0;
+    color: var(--course-item-color);
+    font-size: 1.1rem;
+}
+
+.course-item .credits {
+    font-weight: bold;
+    color: var(--course-item-credits-color);
+    margin: 0 0 1rem 0;
+}
+
+.course-item .description {
+    color: var(--course-item-description-color);
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.tech-tag {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    ;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
+.course-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 
 /* -- FOOTER SECTION -- */
 footer {
@@ -240,7 +371,7 @@ footer {
     width: 44px;
     height: 44px;
     /*border: red dashed 1px; */
-    border: #ccc solid 1px;
+    border: var(--border-social-a-color) solid 1px;
     /*border-radius: 4px;*/
     /*cuadrado*/
     border-radius: var(--border-radius);

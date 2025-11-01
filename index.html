@@ -27,19 +27,56 @@
 
 <body>
     <header>
-        <img src="images/logo.png" alt="site logo" width="20" height="20">
+        <img src="images/logo.svg" alt="site logo" width="20" height="20">
         <span>WDD 231 COURSE SITE</span>
         <button id="ham-btn" class="hamburger" aria-label="navigation"></button>
     </header>
     <nav id="nav-bar" class="navigation">
         <ul>
-            <li class="current"><a href="index.html" title="Home" id="menu-home">Home</a></li>
-            <li><a href="#" title="Chamber Project" id="menu-chamber">Chamber Project</a></li>
-            <li><a href="#" title="Final Project" id="menu-final">Final Project</a></li>
+            <li class="current"><a href="index.html" title="Home Page" id="menu-home">Home</a></li>
+            <li><a href="#" title="Chamber Project" id="menu-chamber">Chamber</a></li>
+            <li><a href="#" title="Final Project" id="menu-final">Final</a></li>
         </ul>
     </nav>
     <main>
         <h1>Home</h1>
+        <div class="sections-container">
+            <!-- First row: 2 columns -->
+            <section class="sect about-me">
+                <h2>About Me</h2>
+                <div class="sect-content">
+                    <p>Hello! My name is Anna Karpova de Nuñez, and I am from Lima, Perú. I enjoy playing
+                        volleyball,
+                        growing
+                        plants, listening to music, and cooking. My hobby is embroidering in cross-stitch because it
+                        is easy
+                        and
+                        relaxing.</p>
+                </div>
+            </section>
+            <section class="sect student-photo">
+                <h2>Student Photo</h2>
+                <div class="sect-content">
+                    <div class="profile-image">
+                        <img src="images/profile.png" alt="Hello, my name is Anna Karpova de Nuñez">
+                    </div>
+                </div>
+            </section>
+            <!-- Second row: 3 columns -->
+            <section class="sect courses-section">
+                <h2>Web Certificate Courses</h2>
+                <div class="sect-content">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" id="all">ALL</button>
+                        <button class="filter-btn" id="cse">CSE</button>
+                        <button class="filter-btn" id="wdd">WDD</button>
+                    </div>
+                    <div class="courses-grid" id="coursesContainer">
+                        <!-- Courses will be generated here by JavaScript -->
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
     <footer>
         <div class="social">

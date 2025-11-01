@@ -174,6 +174,8 @@ function displayCourses(filter = 'all') {
     });
 }
 
+//<span class="status ${course.completed ? 'completed-badge' : 'pending-badge'}">
+
 function filterButtons() {
     const buttons = document.querySelectorAll('.filter-btn');
 

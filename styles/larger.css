@@ -19,13 +19,13 @@
     }
 
     /*-- navigation--*/
+    /*flex: 1 1 100%;*/
     nav ul {
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-around;
 
         li {
-            /*flex: 1 1 100%;*/
             flex: 1 1 auto;
 
         }

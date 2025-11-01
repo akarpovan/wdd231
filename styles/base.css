@@ -19,6 +19,7 @@
     --course-item-credits-color: #666;
     --course-item-description-color: #555;
     --border-social-a-color: #ccc;
+    --font-color: #000000;
     --white-color: white;
     --border-radius: 22px;
     --font: "Merriweather Sans", sans-serif;
@@ -194,7 +195,8 @@ main h1 {
 
 .filter-btn.active {
     background: var(--background-color3);
-    color: var(--white-color);
+    /*color: var(--white-color);*/
+    color: var(--font-color);
 }
 
 .filter-btn:hover {
@@ -302,7 +304,7 @@ main h1 {
 
 .completed-badge {
     background-color: var(--border-complete-color);
-    color: var(--white-color);
+    color: var(--pending-badge-color);
 }
 
 .pending-badge {
@@ -339,7 +341,6 @@ main h1 {
 .tech-tag {
     background-color: var(--primary-color);
     color: var(--white-color);
-    ;
     padding: 0.2rem 0.6rem;
     border-radius: 12px;
     font-size: 0.8rem;
@@ -353,7 +354,7 @@ main h1 {
 /* -- FOOTER SECTION -- */
 footer {
     background-color: var(--background-color2);
-    padding: 1ren 10px;
+    padding: 1rem 10px;
     text-align: center;
 }
 
@@ -389,4 +390,5 @@ footer {
 
 p {
     padding-bottom: 10px;
+
 }

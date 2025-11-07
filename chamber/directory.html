@@ -16,11 +16,87 @@
     <meta property="og:image" content="https://akarpovan.github.io/wdd231/chamber/images/capitan-moroni.png">
     <meta property="og:url" content="https://akarpovan.github.io/wdd231/chamber/directory.html">
 
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
 
+    <script src="scripts/member.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/toggling-grid-list-view.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo"><img src="images/logo.svg" alt="Lima Chamber of Commerce" width="80" height="40">Lima
+                Chamber of Commerce</h1>
+            <nav class="nav">
+                <button class="menu-toggle">☰</button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html" class="active">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <h1>Directory</h1>
+        </div>
+        <div class="menu">
+            <button id="grid">Grid</button>
+            <button id="list">List</button>
+        </div>
+        <article class="grid">
+            <!-- Members will be generated here by JavaScript -->
+            <!--section>
+                <h3>name</h3>
+                <p>address</p>
+                <p>phonenumber</p>
+                <img src="https://akarpovan.github.io/wdd231/chamber/images/inca-trilogy-logo.png" alt="Logo" />
+                <a href="https://www.incatrilogytours.com/" target="_blank">websiteurl</a>
+                <p>membershiplevel</p>
+            </section-->
+        </article>
+    </main>
 
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-column address">
+                <p class="bold">Lima Chamber of Commerce</p>
+                <p>Residencial San Felipe, Jesus Maria</p>
+                <p>Lima, Perú 15072</p>
+                <p>info@limachamberofcommerce.org</p>
+                <p>(+51) 987 123 654</p>
+            </div>
+            <div class="footer-column social">
+                <a href="https://github.com/akarpovan" target="_blank"><img src="images/github.svg" alt="GitHub"
+                        width="16" height="16"></a>
+                <a href="https://www.facebook.com/akarpova/" target="_blank"><img src="images/facebook.svg"
+                        alt="Facebook" width="16" height="16"></a>
+                <a href="https://www.linkedin.com/in/anna-karpova-b8553894/" target="_blank"><img
+                        src="images/linkedin.svg" alt="LinkedIn" width="16" height="16"></a>
+                <a href="https://x.com/" target="_blank"><img src="images/twitter-x.svg" alt="Twitter" width="16"
+                        height="16"></a>
+                <a href="https://www.microsoft.com/es-es/microsoft-teams/log-in" target="_blank"><img
+                        src="images/microsoft-teams.svg" alt="Microsoft Teams" width="16" height="16"></a>
+            </div>
+            <div class="footer-column container">
+                <p>WDD231 Class Project</p>
+                <p>Anna Karpova de Nuñez</p>
+                <p>©<span id="currentyear"></span> Lima Chamber of Commerce</p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

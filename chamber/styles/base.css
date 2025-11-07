@@ -129,7 +129,6 @@ main h1 {
     }
 }
 
-/* Grid View */
 /* List View - Zebra Style */
 .list {
     width: 100%;
@@ -140,7 +139,9 @@ main h1 {
 
 .list section {
     display: grid;
-    grid-template-columns: 2fr 1fr auto;
+    /*grid-template-columns: 2fr 1fr auto;*/
+    /*grid-template-columns: repeat(4, 1fr);*/
+    grid-template-columns: 1fr 1fr 1fr 2fr;
     gap: 20px;
     align-items: center;
     padding: 15px 20px;
@@ -271,7 +272,7 @@ main h1 {
 
 .main-image {
     width: 100% !important;
-    height: 400px !important;
+    height: 350px !important;
     object-fit: cover !important;
     margin: 10px 0;
     border-radius: 6px;

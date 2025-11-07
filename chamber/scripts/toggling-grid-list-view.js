@@ -53,6 +53,7 @@ function displayMembers(members, viewType = 'grid') {
             section.innerHTML = `
                 <h3>${member.name}</h3>
                 <p>${fullAddress}</p>
+                <p>${member.phonenumber}</p>
                 <a href="${member.websiteurl}" target="_blank" class="website-link">${member.websiteurl}</a>
             `;
         } else {

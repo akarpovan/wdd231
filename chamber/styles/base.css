@@ -119,7 +119,7 @@ main h1 {
     text-align: left;
 }
 
-.menu {
+/*.menu {
     margin: 1rem auto;
     padding: 0.5rem;
     background-color: var(--dark-color);
@@ -129,7 +129,7 @@ main h1 {
 .menu button {
     padding: 0.5rem 1rem;
     font-weight: 700;
-}
+}*/
 
 /* List View - Zebra Style */
 .list {
@@ -301,11 +301,14 @@ main h1 {
 /* Menu buttons */
 .menu {
     text-align: center;
-    margin: 20px 0;
+    /*margin: 20px 0;*/
+    margin: 1rem auto;
+    padding: 0.5rem;
+    background-color: var(--dark-color);
 }
 
 .menu button {
-    padding: 10px 20px;
+    /*padding: 10px 20px;*/
     margin: 0 10px;
     border: none;
     border-radius: 5px;
@@ -314,6 +317,8 @@ main h1 {
     /*color: white;*/
     color: var(--dark-color);
     cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-weight: 700;
 }
 
 .menu button:hover {

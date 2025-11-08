@@ -122,11 +122,11 @@ main h1 {
     padding: 0.5rem;
     background-color: var(--dark-color);
     text-align: center;
+}
 
-    button {
-        padding: 0.5rem 1rem;
-        font-weight: 700;
-    }
+.menu button {
+    padding: 0.5rem 1rem;
+    font-weight: 700;
 }
 
 /* List View - Zebra Style */

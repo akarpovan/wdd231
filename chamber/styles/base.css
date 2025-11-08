@@ -5,12 +5,8 @@
 }
 
 :root {
-    /*--primary-color: #3498db;*/
     --primary-color: #165783;
-    --secondary-color: #2ecc71;
-    --accent-color: #e74c3c;
     --dark-color: #2c3e50;
-    --light-color: #ecf0f1;
     --text-color: #333;
     --background-color: #f8f9fa;
     --background-color1: #ddd;
@@ -166,7 +162,8 @@ main h1 {
 .list h3 {
     margin: 0;
     font-size: 1.1rem;
-    color: #333;
+    /*color: #333;*/
+    color: white;
 }
 
 .list p {
@@ -239,7 +236,7 @@ main h1 {
 .plain-url {
     /*color: #007bff;*/
     color: var(--primary-color);
-    text-decoration: none;
+    text-decoration: underline;
     margin: 10px 0;
     text-align: center;
     display: block;
@@ -247,12 +244,13 @@ main h1 {
 }
 
 .plain-url:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: #0056b3;
 }
 
 .website-link {
-    color: #007bff;
+    /*color: #007bff;*/
+    color: var(--primary-color);
     text-decoration: underline;
     font-size: 0.9rem;
     background: transparent;

@@ -237,7 +237,8 @@ main h1 {
 
 /* Enlace de website */
 .plain-url {
-    color: #007bff;
+    /*color: #007bff;*/
+    color: var(--primary-color);
     text-decoration: none;
     margin: 10px 0;
     text-align: center;

@@ -3,16 +3,12 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function startApp() {
-    // PRIMERO: Configurar el menú hamburguesa (crítico para todas las páginas)
     mobileMenu();
+    //menuTitle();
+    menuActive();
 }
 
-// ============
-// MOBILE MENU 
-// ============
-
 function mobileMenu() {
-    // Usar delegación de eventos a nivel de documento
     document.addEventListener('click', function (e) {
         if (e.target.classList.contains('menu-toggle') || e.target.closest('.menu-toggle')) {
             e.preventDefault();
@@ -28,3 +24,56 @@ function mobileMenu() {
         }
     });
 }
+
+/*function menuTitle() {
+    const titleElement = document.querySelector('main h1');
+    if (!titleElement) return;
+
+    const currentPage = window.location.pathname;
+
+    if (currentPage.includes('directory.html')) {
+        titleElement.textContent = 'DIRECTORY';
+    } else if (currentPage.includes('join.html')) {
+        titleElement.textContent = 'JOIN';
+    } else if (currentPage.includes('discover.html')) {
+        titleElement.textContent = 'DISCOVER';
+    } else {
+        titleElement.textContent = 'HOME';
+    }
+}*/
+
+function menuActive() {
+    const currentPage = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-menu a');
+
+    navLinks.forEach(link => {
+        // Remover clase active de todos
+        link.classList.remove('active');
+
+        // Agregar clase active si el href coincide con la página actual
+        if (currentPage.includes(link.getAttribute('href'))) {
+            link.classList.add('active');
+        }
+    });
+}
+
+/*function menuActive() {
+    const currentPage = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-menu a');
+
+    // Remover clase active de todos los enlaces
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+    });
+
+    // Agregar clase active al enlace correspondiente
+    if (currentPage.includes('directory.html')) {
+        document.querySelector('.nav-menu a[href="directory.html"]').classList.add('active');
+    } else if (currentPage.includes('join.html')) {
+        document.querySelector('.nav-menu a[href="join.html"]').classList.add('active');
+    } else if (currentPage.includes('discover.html')) {
+        document.querySelector('.nav-menu a[href="discover.html"]').classList.add('active');
+    } else {
+        document.querySelector('.nav-menu a[href="index.html"]').classList.add('active');
+    }
+}*/

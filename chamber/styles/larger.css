@@ -46,6 +46,36 @@
         background-color: var(--primary-color);
         color: white;
     }
+
+    .cta-button-container {
+        bottom: 15px;
+        right: 15px;
+        left: 15px;
+        text-align: center;
+    }
+
+    .cta-button {
+        width: auto;
+        display: inline-block;
+    }
+
+    .hero-content {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        max-width: 100%;
+        background: var(--dark-color);
+        margin-top: 1rem;
+    }
+
+    .home-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .spotlights-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 
@@ -89,5 +119,14 @@
 @media (max-width: 600px) {
     .grid {
         grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .cta-button-container {
+        bottom: 10px;
+        right: 10px;
+        left: 10px;
     }
 }

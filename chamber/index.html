@@ -24,7 +24,7 @@
 
     <script src="scripts/date.js" defer></script>
     <script src="scripts/menu.js" defer></script>
-    <script src="scripts/toggling-grid-list-view.js" defer></script>
+    <script src="scripts/home.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,13 +52,60 @@
         <div class="container">
             <h1>Home</h1>
         </div>
-        <div class="menu">
-            <button id="grid">Grid</button>
-            <button id="list">List</button>
+        <div class="main-container">
+            <section class="hero-section">
+                <picture>
+                    <source srcset="images/machupicchu-large.webp" media="(min-width: 1000px)">
+                    <source srcset="images/machupicchu-medium.webp" media="(min-width: 500px)">
+                    <img src="images/machupicchu-small.webp" alt="Panoramic view of Machu Picchu" width="500"
+                        height="250" class="hero-image">
+                </picture>
+                <div class="cta-button-container">
+                    <a href="join.html" class="cta-button">Join the Chamber</a>
+                </div>
+            </section>
         </div>
-        <article class="grid">
-            <!-- Members will be generated here by JavaScript -->
-        </article>
+        <!-- First Row: Events, Weather, Forecast -->
+        <div class="home-grid">
+            <section class="card events">
+                <h3>Current Events</h3>
+                <div class="event-item">
+                    <h4>Business Networking Mixer</h4>
+                    <p><strong>Date:</strong> March 15, 2024</p>
+                    <p><strong>Time:</strong> 6:00 PM - 8:00 PM</p>
+                    <p><strong>Location:</strong> Chamber Headquarters</p>
+                </div>
+                <div class="event-item">
+                    <h4>Small Business Workshop</h4>
+                    <p><strong>Date:</strong> March 22, 2024</p>
+                    <p><strong>Time:</strong> 2:00 PM - 4:00 PM</p>
+                    <p>Learn digital marketing strategies</p>
+                </div>
+            </section>
+
+            <section class="card weather">
+                <h3>Current Weather</h3>
+                <div id="current-weather">
+                    <div class="weather-loading">Loading weather data...</div>
+                </div>
+            </section>
+
+            <section class="card forecast">
+                <h3>3-Day Forecast</h3>
+                <div id="weather-forecast">
+                    <div class="weather-loading">Loading forecast...</div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Second Row: Company Spotlights -->
+        <section class="spotlights">
+            <h3>Member Spotlights</h3>
+            <div class="spotlights-grid" id="spotlights-container">
+                <div class="loading">Loading member spotlights...</div>
+            </div>
+        </section>
+        </div>
     </main>
 
     <footer class="footer">

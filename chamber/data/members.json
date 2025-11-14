@@ -28,7 +28,7 @@
             "websiteurl": "https://www.manosperuanas.com/",
             "logourl": "https://akarpovan.github.io/wdd231/chamber/images/manos-peruanas-logo.png",
             "imageurl": "https://akarpovan.github.io/wdd231/chamber/images/manos-peruanas.png",
-            "membershiplevel": 1
+            "membershiplevel": 2
         },
         {
             "name": "Ruraqmaki",
@@ -43,7 +43,7 @@
             "websiteurl": "https://www.ruraqmaki.pe/",
             "logourl": "https://akarpovan.github.io/wdd231/chamber/images/ruraqmaki-logo.png",
             "imageurl": "https://akarpovan.github.io/wdd231/chamber/images/ruraqmaki.png",
-            "membershiplevel": 1
+            "membershiplevel": 3
         },
         {
             "name": "Huillca Expedition",
@@ -73,7 +73,7 @@
             "websiteurl": "https://www.saboresperuanos.pe/",
             "logourl": "https://akarpovan.github.io/wdd231/chamber/images/sabores-peruanos-logo.png",
             "imageurl": "https://akarpovan.github.io/wdd231/chamber/images/sabores-peruanos.png",
-            "membershiplevel": 1
+            "membershiplevel": 2
         },
         {
             "name": "Panchita",
@@ -88,7 +88,7 @@
             "websiteurl": "https://www.panchita.pe/",
             "logourl": "https://akarpovan.github.io/wdd231/chamber/images/panchita-logo.png",
             "imageurl": "https://akarpovan.github.io/wdd231/chamber/images/panchita.png",
-            "membershiplevel": 1
+            "membershiplevel": 3
         },
         {
             "name": "Inca Trilogy Tours",
@@ -103,7 +103,7 @@
             "websiteurl": "https://www.incatrilogytours.com/",
             "logourl": "https://akarpovan.github.io/wdd231/chamber/images/inca-trilogy-logo.png",
             "imageurl": "https://akarpovan.github.io/wdd231/chamber/images/inca-trilogy.png",
-            "membershiplevel": 1
+            "membershiplevel": 2
         }
     ]
 }

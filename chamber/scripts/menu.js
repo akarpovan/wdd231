@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     startApp();
+    initHomePage();
 });
 
 function startApp() {

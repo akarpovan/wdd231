@@ -74,7 +74,29 @@
     }
 
     .spotlights-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1rem;
+    }
+
+    .spotlight-card {
+        padding: 1rem;
+    }
+
+    .spotlight-card h4 {
+        font-size: 1.2rem;
+    }
+
+    .spotlight-content {
+        gap: 0.8rem;
+    }
+
+    .spotlight-logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .spotlight-info p {
+        font-size: 0.9rem;
     }
 }
 
@@ -128,5 +150,30 @@
         bottom: 10px;
         right: 10px;
         left: 10px;
+    }
+
+    .spotlights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .spotlights {
+        padding: 1rem;
+    }
+
+    .spotlights h3 {
+        margin: -1rem -1rem 1rem -1rem;
+    }
+
+    .spotlight-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .spotlight-logo {
+        align-self: center;
+    }
+
+    .spotlight-info p {
+        justify-content: center;
     }
 }

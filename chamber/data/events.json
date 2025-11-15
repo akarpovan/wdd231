@@ -1,0 +1,16 @@
+{
+    "events": [
+        {
+            "name": "Business Networking Mixer",
+            "date": "November 15, 2025",
+            "time": "6:00 PM - 8:00 PM",
+            "location": "Chamber Headquarters"
+        },
+        {
+            "name": "Small Business Workshop",
+            "date": "November 22, 2025",
+            "time": "2:00 PM - 4:00 PM",
+            "location": "Learn digital marketing strategies"
+        }
+    ]
+}

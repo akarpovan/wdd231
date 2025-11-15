@@ -48,6 +48,18 @@ function displayMembers(members, viewType = 'grid') {
         // Format address
         const fullAddress = `${member.address.street}, ${member.address.city}`;
 
+        //membershiplevel
+        let level = '';
+        if (member.membershiplevel === 3) {
+            level = 'Gold';
+        }
+        else if (member.membershiplevel === 2) {
+            level = 'Silver';
+        }
+        else {
+            level = 'Member';
+        }
+
         if (viewType === 'list') {
             // Vista LISTA - solo texto tipo tabla zebra
             section.innerHTML = `
@@ -65,7 +77,8 @@ function displayMembers(members, viewType = 'grid') {
                 <p>${member.phonenumber}</p>
                 <img src="${member.imageurl}" alt="${member.name}" class="main-image" />
                 <a href="${member.websiteurl}" target="_blank" class="plain-url">${member.websiteurl}</a>
-                <p>Membership Level: ${member.membershiplevel}</p>
+                <!--p>Membership Level: ${member.membershiplevel}</p-->
+                 <p>Membership Level: <span class="membership-badge ${level.toLowerCase()}">${level}</span></p>
             `;
         }
 

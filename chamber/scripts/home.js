@@ -183,6 +183,38 @@ function displaySpotlights(members) {
     spotlightsContainer.innerHTML = spotlightsHTML;
 }
 
+/* Events */
+async function fetchEventsData() {
+    try {
+        const response = await fetch('data/events.json');
+        const data = await response.json();
+
+        displayEvents(data.events); //Array of events
+
+    } catch (error) {
+        console.error('Error fetching events data:', error);
+    }
+}
+
+function displayEvents(events) {
+    const currentEvent = document.getElementById('current-event');
+
+    let currentEventHTML = '';
+
+    events.forEach(event => {
+        currentEventHTML += `
+            <div class="event-item">
+                    <h4>${event.name}</h4>
+                    <p><strong>Date:</strong> ${event.date}</p>
+                    <p><strong>Time:</strong> ${event.time}</p>
+                    <p><strong>Location:</strong> ${event.location}</p>
+                </div>
+        `;
+    });
+
+    currentEvent.innerHTML = currentEventHTML;
+}
+
 function initHomePage() {
     // Only run on home page
     if (!window.location.pathname.includes('index.html') && window.location.pathname !== '/') {
@@ -191,6 +223,7 @@ function initHomePage() {
 
     fetchWeatherData();
     fetchMemberSpotlights();
+    fetchEventsData();
 }
 
 // Add this to your existing menu.js or call it from DOMContentLoaded

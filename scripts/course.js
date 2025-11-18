@@ -133,7 +133,6 @@ const courses = [
     }
 ]
 
-
 function displayCourses(filter = 'all') {
     const container = document.getElementById('coursesContainer');
     const creditsElement = document.getElementById('totalCredits');
@@ -157,7 +156,10 @@ function displayCourses(filter = 'all') {
 
         courseElement.innerHTML = `
             <div class="course-header">
-                <h3>${course.subject} ${course.number}</h3>
+                 <button class="course-btn" data-course-number="${course.number}">
+                    ${course.subject} ${course.number}
+                </button>
+                <!--h3>${course.subject} ${course.number}</h3-->
                 <span class="status ${course.completed ? 'completed-badge' : 'pending-badge'}">
                     ${course.completed ? 'Completed' : 'Pending'}
                 </span>
@@ -172,9 +174,21 @@ function displayCourses(filter = 'all') {
 
         container.appendChild(courseElement);
     });
+
+    // Event listeners for a buttons of cuorses
+    addCourseButtonListeners();
 }
 
-//<span class="status ${course.completed ? 'completed-badge' : 'pending-badge'}">
+function addCourseButtonListeners() {
+    const courseButtons = document.querySelectorAll('.course-btn');
+
+    courseButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const courseNumber = parseInt(this.getAttribute('data-course-number'));
+            displayCourseDetails(courseNumber);
+        });
+    });
+}
 
 function filterButtons() {
     const buttons = document.querySelectorAll('.filter-btn');
@@ -190,6 +204,65 @@ function filterButtons() {
         });
     });
 }
+
+function displayCourseDetails(courseNumber) {
+    // Encontrar el curso por número
+    const course = courses.find(c => c.number === courseNumber);
+
+    if (!course) return;
+
+    const courseDetails = document.getElementById('course-details');
+    courseDetails.innerHTML = `
+        <div class="modal-header">
+            <h2>${course.subject} ${course.number}</h2>
+            <button id="closeModal" class="close-btn">❌</button>
+        </div>
+        <div class="modal-content">
+            <h3>${course.title}</h3>
+            <p><strong>Credits:</strong> ${course.credits}</p>
+            <p><strong>Certificate:</strong> ${course.certificate}</p>
+            <p><strong>Status:</strong> ${course.completed ? 'Completed' : 'Pending'}</p>
+            <p><strong>Description:</strong> ${course.description}</p>
+            <p><strong>Technologies:</strong> ${course.technology.join(', ')}</p>
+        </div>
+    `;
+
+    courseDetails.showModal();
+
+    // Agregar event listener para cerrar el modal
+    document.getElementById('closeModal').addEventListener("click", () => {
+        courseDetails.close();
+    });
+
+    // Cerrar modal al hacer click fuera
+    courseDetails.addEventListener('click', (e) => {
+        if (e.target === courseDetails) {
+            courseDetails.close();
+        }
+    });
+}
+
+/*function displayCourseDetails(course) {
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+      <button id="closeModal">❌</button>
+      <h2>${course.subject} ${course.number}</h2>
+      <h3>${course.title}</h3>
+      <p><strong>Credits</strong>: ${course.credits}</p>
+      <p><strong>Certificate</strong>: ${course.certificate}</p>
+      <p>${course.description}</p>
+      <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
+    courseDetails.showModal();
+
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
+    });
+}*/
+
+/*courseDiv.addEventListener('click', () => {
+    displayCourseDetails(course);
+});*/
 
 // Inicialize
 document.addEventListener('DOMContentLoaded', function () {

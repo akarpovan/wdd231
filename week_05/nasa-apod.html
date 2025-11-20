@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NASA Astronomy Picture of the Day - Explore the cosmos">
+    <meta name="author" content="Your Name">
+    <title>NASA - Astronomy Picture of the Day</title>
+
+    <link rel="stylesheet" href="styles/nasa-apod.css">
+    <script type="module" src="scripts/nasa-apod.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>🌌 NASA Astronomy Picture of the Day</h1>
+            <p class="subtitle">Discover the cosmos, one image at a time</p>
+        </header>
+
+        <!-- Date Selector -->
+        <div class="date-selector">
+            <label for="date-input">📅 Select a Date:</label>
+            <input type="date" id="date-input" max="">
+        </div>
+
+        <!-- Error Message -->
+        <div id="error"></div>
+
+        <!-- Loading Message -->
+        <div class="loading" id="loading">Loading today's cosmic wonder...</div>
+
+        <!-- APOD Content Container -->
+        <div id="apod-container"></div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Powered by <a href="https://api.nasa.gov/" target="_blank">NASA's APOD API</a></p>
+            <p>&copy; 2024 - Astronomy Picture of the Day</p>
+        </footer>
+    </div>
+</body>
+
+</html>

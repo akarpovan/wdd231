@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.date-selector {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.date-selector label {
+    font-weight: 600;
+    color: #667eea;
+}
+
+#date-input {
+    padding: 10px 15px;
+    border: 2px solid #667eea;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#date-input:hover,
+#date-input:focus {
+    border-color: #764ba2;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+#error {
+    background: #ff6b6b;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: none;
+}
+
+#error:not(:empty) {
+    display: block;
+}
+
+.loading {
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    padding: 40px;
+}
+
+#apod-container {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.apod-card h2 {
+    font-size: 2rem;
+    color: #667eea;
+    padding: 30px 30px 10px;
+}
+
+.apod-card .date {
+    color: #666;
+    font-size: 0.9rem;
+    padding: 0 30px 20px;
+    font-style: italic;
+}
+
+.apod-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 600px;
+    object-fit: contain;
+    background: #000;
+}
+
+.apod-card iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+}
+
+.apod-card .explanation {
+    padding: 30px;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: #444;
+}
+
+.apod-card .copyright {
+    padding: 0 30px;
+    color: #888;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.apod-card a {
+    display: inline-block;
+    margin: 20px 30px 30px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.apod-card a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+footer {
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+    padding: 20px;
+    opacity: 0.8;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .date-selector {
+        flex-direction: column;
+    }
+
+    .apod-card h2 {
+        font-size: 1.5rem;
+        padding: 20px 20px 10px;
+    }
+
+    .apod-card .explanation {
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .apod-card iframe {
+        height: 300px;
+    }
+}

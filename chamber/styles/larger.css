@@ -98,6 +98,12 @@
     .spotlight-info p {
         font-size: 0.9rem;
     }
+
+    /* ---- */
+    .main-container-join {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
 }
 
 

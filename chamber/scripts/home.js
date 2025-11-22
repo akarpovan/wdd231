@@ -215,7 +215,7 @@ function displayEvents(events) {
     currentEvent.innerHTML = currentEventHTML;
 }
 
-function initHomePage() {
+/*function initHomePage() {
     // Only run on home page
     if (!window.location.pathname.includes('index.html') && window.location.pathname !== '/') {
         return;
@@ -227,6 +227,22 @@ function initHomePage() {
 }
 
 // Add this to your existing menu.js or call it from DOMContentLoaded
+document.addEventListener('DOMContentLoaded', function () {
+    initHomePage();
+});*/
+
+function initHomePage() {
+    // Only run on home page
+    if (!window.location.pathname.includes('index.html') && window.location.pathname !== '/') {
+        return;
+    }
+
+    fetchWeatherData();
+    fetchMemberSpotlights();
+    fetchEventsData();
+}
+
+// Initialize home page when DOM is loaded
 document.addEventListener('DOMContentLoaded', function () {
     initHomePage();
 });

@@ -24,6 +24,7 @@
 
     <script src="scripts/date.js" defer></script>
     <script src="scripts/menu.js" defer></script>
+    <script src="scripts/join.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,6 +51,118 @@
     <main class="main">
         <div class="container">
             <h1>Join</h1>
+            <div class="main-container-join">
+                <div class="form-section">
+                    <h3>Membership Application Form</h3>
+                    <form id="joinForm" class="join-form" novalidate>
+                        <div class="form-group">
+                            <label for="firstName">First name <span class="required">*</span></label>
+                            <input type="text" id="firstName" name="firstName" title="Please enter your first name"
+                                autocomplete="given-name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName">Last name <span class="required">*</span></label>
+                            <input type="text" id="lastName" name="lastName" title="Please enter your last name"
+                                autocomplete="family-name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="orgTitle">Organization Title</label>
+                            <input type="text" id="orgTitle" name="orgTitle"
+                                title="Enter your organizational title (minimum 7 characters, letters, hyphens, and spaces only)"
+                                autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}"
+                                placeholder="Senior Manager" minlength="7">
+                            <small class="form-text">
+                                Minimum 7 characters. Only letters, spaces, and hyphens allowed.
+                            </small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" title="Please enter a valid email address"
+                                autocomplete="email" placeholder="anna@gmail.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mobile">Mobile Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="mobile" name="mobile" title="Please enter your mobile phone number"
+                                autocomplete="tel" placeholder="123-456-7890" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="orgName">Organization Name <span class="required">*</span></label>
+                            <input type="text" id="orgName" name="orgName"
+                                title="Please enter your organization or business name" autocomplete="organization"
+                                placeholder="Transport Company" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="membership">Membership Level <span class="required">*</span></label>
+                            <select id="membership" name="membership" title="Please select your membership level"
+                                required>
+                                <option value="" disabled selected>Select a membership level</option>
+                                <option value="np">NP Membership - Non-profit organizations (No fee)</option>
+                                <option value="bronze">Bronze Membership</option>
+                                <option value="silver">Silver Membership</option>
+                                <option value="gold">Gold Membership</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Business Description</label>
+                            <textarea id="description" name="description"
+                                title="Please provide a description of your business or organization" rows="5" cols="50"
+                                placeholder="Describe your organization's mission, services, and goals"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="hidden" id="timestamp" name="timestamp" value="">
+                        </div>
+
+                        <div class="form-actions">
+                            <input type="submit" class="btn btn-primary" value="Apply for Membership">
+                        </div>
+                    </form>
+
+                    <div id="formMessage" class="form-message"></div>
+                </div>
+
+                <div class="membership-cards">
+                    <h3>Membership Levels</h3>
+                    <div class="card-membership np" data-level="np">
+                        <h2>Non profit Membership Level</h2>
+                        <button class="learn-more" id="npBtn">Learn More</button>
+                    </div>
+
+                    <div class="card-membership bronze" data-level="bronze">
+                        <h2>Bronze Membership Level</h2>
+                        <button class="learn-more" id="bronzeBtn">Learn More</button>
+                    </div>
+
+                    <div class="card-membership silver" data-level="silver">
+                        <h2>Silver Membership Level</h2>
+                        <button class="learn-more" id="silverBtn">Learn More</button>
+                    </div>
+
+                    <div class="card-membership gold" data-level="gold">
+                        <h2>Gold Membership Level</h2>
+                        <button class="learn-more" id="goldBtn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Modal for all membership levels -->
+            <dialog id="membershipModal" class="modal">
+                <div class="modal-content">
+                    <button class="close-modal" id="closeModal">×</button>
+                    <h2 id="modalTitle">Membership Benefits</h2>
+                    <div id="modalBody">
+                        <!-- Content will be loaded by JavaScript -->
+                    </div>
+                </div>
+            </dialog>
+        </div>
         </div>
     </main>
 

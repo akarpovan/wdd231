@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber Home Page</title>
+    <title>Chamber Join Page</title>
     <meta name="description"
-        content="Anna Karpova's chamber home page for the project of BYU-Idaho WDD 231 - Web Frontend Development I course.">
+        content="Anna Karpova's chamber join page for the project of BYU-Idaho WDD 231 - Web Frontend Development I course.">
     <meta name="author" content="Anna Karpova de Nuñez">
 
     <!-- Social Media Meta Tags - Facebook Open Graph -->
@@ -24,7 +24,7 @@
 
     <script src="scripts/date.js" defer></script>
     <script src="scripts/menu.js" defer></script>
-    <script src="scripts/home.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,62 +40,32 @@
             <nav class="nav">
                 <button class="menu-toggle">☰</button>
                 <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="directory.html">Directory</a></li>
-                    <li><a href="join.html">Join</a></li>
-                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="index.html" id="menu-home">Home</a></li>
+                    <li><a href="directory.html" id="menu-directory">Directory</a></li>
+                    <li><a href="join.html" id="menu-join">Join</a></li>
+                    <li><a href="discover.html" id="menu-discover">Discover</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main class="main">
         <div class="container">
-            <h1>Home</h1>
-        </div>
-        <div class="main-container-home">
-            <section class="hero-section">
-                <picture>
-                    <source srcset="images/machupicchu-large.webp" media="(min-width: 1000px)">
-                    <source srcset="images/machupicchu-medium.webp" media="(min-width: 500px)">
-                    <img src="images/machupicchu-small.webp" alt="Panoramic view of Machu Picchu" width="500"
-                        height="250" class="hero-image">
-                </picture>
-                <div class="cta-button-container">
-                    <a href="join.html" class="cta-button">Join the Chamber</a>
+            <h1>Thank you</h1>
+            <div class="thank-you-container">
+                <h1>Thank You for Your Application!</h1>
+                <div class="application-summary">
+                    <h2>Application Summary</h2>
+                    <div id="applicationDetails" class="application-details">
+                        <!-- Application details from javascript -->
+                    </div>
                 </div>
-            </section>
-        </div>
-        <!-- First Row: Events, Weather, Forecast -->
-        <div class="home-grid">
-            <section class="card events">
-                <h3>Events</h3>
-                <div id="current-event">
-                    <!-- Loading event data from javascript -->
-                </div>
-            </section>
 
-            <section class="card weather">
-                <h3>Current Weather</h3>
-                <div id="current-weather">
-                    <!-- Loading weather data from javascript -->
+                <div class="action-buttons">
+                    <a href="index.html" class="btn btn-primary">Return to Home</a>
+                    <a href="directory.html" class="btn btn-secondary">View Business Directory</a>
                 </div>
-            </section>
-
-            <section class="card forecast">
-                <h3>Weather Forecast</h3>
-                <div id="weather-forecast">
-                    <!-- Loading forecast data from javascript -->
-                </div>
-            </section>
-        </div>
-
-        <!-- Second Row: Company Spotlights -->
-        <section class="spotlights">
-            <h3>Member Spotlights</h3>
-            <div class="spotlights-grid" id="spotlights-container">
-                <!-- Loading member spotlights from javascript -->
             </div>
-        </section>
+        </div>
     </main>
 
     <footer class="footer">

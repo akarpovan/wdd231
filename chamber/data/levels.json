@@ -1,0 +1,46 @@
+{
+    "levels": [
+        {
+            "np": {
+                "title": "Non-profit Membership Level",
+                "benefits": [
+                    "No membership fee",
+                    "Listing in business directory",
+                    "Access to networking events",
+                    "Monthly newsletter"
+                ],
+                "cost": "Free"
+            },
+            "bronze": {
+                "title": "Bronze Membership Level",
+                "benefits": [
+                    "$100 annual fee",
+                    "All NP benefits plus:",
+                    "Business training workshops",
+                    "10% event discounts"
+                ],
+                "cost": "$100/year"
+            },
+            "silver": {
+                "title": "Silver Membership Level",
+                "benefits": [
+                    "$250 annual fee",
+                    "All Bronze benefits plus:",
+                    "25% event discounts",
+                    "Featured in monthly spotlight"
+                ],
+                "cost": "$250/year"
+            },
+            "gold": {
+                "title": "Gold Membership Level",
+                "benefits": [
+                    "$500 annual fee",
+                    "All Silver benefits plus:",
+                    "50% event discounts",
+                    "Home page spotlight rotation"
+                ],
+                "cost": "$500/year"
+            }
+        }
+    ]
+}

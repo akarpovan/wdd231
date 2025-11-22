@@ -28,28 +28,6 @@ function setTimestamp() {
     document.getElementById('timestamp').value = now.toISOString();
 }
 
-// Form handling
-/*function setForm() {
-    const form = document.getElementById('joinForm');
-    const formMessage = document.getElementById('formMessage');
-
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        if (validateForm()) {
-            // Get form data
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData);
-
-            // Store in localStorage for thankyou page
-            localStorage.setItem('membershipApplication', JSON.stringify(data));
-
-            // Redirect to thank you page
-            window.location.href = 'thankyou.html';
-        }
-    });
-}*/
-
 function setForm() {
     const form = document.getElementById('joinForm');
 

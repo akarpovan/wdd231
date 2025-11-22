@@ -135,7 +135,7 @@ function showError(field, message) {
 }
 
 function clearErrors() {
-    const fields = document.querySelectorAll('.form-group input, .form-group select');
+    const fields = document.querySelectorAll('.input-group input, .input-group select');
     fields.forEach(field => {
         field.classList.remove('input-error');
     });

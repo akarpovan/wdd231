@@ -55,49 +55,49 @@
                 <div class="form-section">
                     <h3>Membership Application Form</h3>
                     <form id="joinForm" class="join-form" novalidate method="get" action="thankyou.html">
-                        <div class="form-group">
+                        <div class="input-group">
                             <label for="firstName">First name <span class="required">*</span></label>
                             <input type="text" id="firstName" name="firstName" title="Please enter your first name"
                                 autocomplete="given-name" required>
                         </div>
 
-                        <div class="form-group">
+                        <div class="input-group">
                             <label for="lastName">Last name <span class="required">*</span></label>
                             <input type="text" id="lastName" name="lastName" title="Please enter your last name"
                                 autocomplete="family-name" required>
                         </div>
 
-                        <div class="form-group">
+                        <div class="input-group">
                             <label for="orgTitle">Organization Title</label>
                             <input type="text" id="orgTitle" name="orgTitle"
                                 title="Enter your organizational title (minimum 7 characters, letters, hyphens, and spaces only)"
                                 autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}"
                                 placeholder="Senior Manager" minlength="7">
-                            <small class="form-text">
+                            <small class="help-text">
                                 Minimum 7 characters. Only letters, spaces, and hyphens allowed.
                             </small>
                         </div>
 
-                        <div class="form-group">
+                        <div class="input-group">
                             <label for="email">Email Address <span class="required">*</span></label>
                             <input type="email" id="email" name="email" title="Please enter a valid email address"
                                 autocomplete="email" placeholder="anna@gmail.com" required>
                         </div>
 
-                        <div class="form-group">
+                        <div class="input-group">
                             <label for="mobile">Mobile Phone Number <span class="required">*</span></label>
                             <input type="tel" id="mobile" name="mobile" title="Please enter your mobile phone number"
                                 autocomplete="tel" placeholder="123-456-7890" required>
                         </div>
 
-                        <div class="form-group">
+                        <div class="input-group">
                             <label for="orgName">Organization Name <span class="required">*</span></label>
                             <input type="text" id="orgName" name="orgName"
                                 title="Please enter your organization or business name" autocomplete="organization"
                                 placeholder="Transport Company" required>
                         </div>
 
-                        <div class="form-group">
+                        <div class="input-group">
                             <label for="membership">Membership Level <span class="required">*</span></label>
                             <select id="membership" name="membership" title="Please select your membership level"
                                 required>
@@ -109,23 +109,23 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
+                        <div class="input-group">
                             <label for="description">Business Description</label>
                             <textarea id="description" name="description"
                                 title="Please provide a description of your business or organization" rows="5" cols="50"
                                 placeholder="Describe your organization's mission, services, and goals"></textarea>
                         </div>
 
-                        <div class="form-group">
+                        <div class="input-group">
                             <input type="hidden" id="timestamp" name="timestamp" value="">
                         </div>
 
-                        <div class="form-actions">
-                            <input type="submit" class="btn btn-primary" value="Apply for Membership">
+                        <div class="form-buttons">
+                            <input type="submit" class="submit-btn main-btn" value="Apply for Membership">
                         </div>
                     </form>
 
-                    <div id="formMessage" class="form-message"></div>
+                    <div id="formMessage" class="form-feedback"></div>
                 </div>
 
                 <div class="membership-cards">

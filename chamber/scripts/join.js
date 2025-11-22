@@ -29,7 +29,7 @@ function setTimestamp() {
 }
 
 // Form handling
-function setForm() {
+/*function setForm() {
     const form = document.getElementById('joinForm');
     const formMessage = document.getElementById('formMessage');
 
@@ -46,6 +46,22 @@ function setForm() {
 
             // Redirect to thank you page
             window.location.href = 'thankyou.html';
+        }
+    });
+}*/
+
+function setForm() {
+    const form = document.getElementById('joinForm');
+
+    form.addEventListener('submit', function (event) {
+        // Validar
+        if (!validateForm()) {
+            event.preventDefault(); // Solo prevenir si la validación falla
+        } else {
+            // Si la validación pasa, guardar datos en localStorage
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            localStorage.setItem('membershipApplication', JSON.stringify(data));
         }
     });
 }

@@ -74,6 +74,7 @@ section {
 
 .orange-color {
     background-color: var(--orange-color);
+    color: #080808;
 }
 
 .white-color {

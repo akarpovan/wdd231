@@ -129,7 +129,27 @@ section {
     font-size: 1.5rem;
     font-weight: bold;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
 }
+
+.logo-nasa {
+    filter: drop-shadow(0 0 8px white) drop-shadow(0 0 12px rgba(255, 255, 255, 0.7));
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.site-title {
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
 
 /* Lists */
 ul {

@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WDD 231 - Web Frontend Development - Anna Karpova de Nuñez</title>
+    <meta name="description"
+        content="Anna Karpova's individual project site plan page for the BYU-Idaho WDD 231 - Web Frontend Development course.">
+    <meta name="author" content="Anna Karpova de Nuñez">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <script src="scripts/siteplan.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">NASA Image Explorer Site Plan</div>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="#" class="active" id="explorer-home">Home</a></li>
+                    <li><a href="#" id="explorer-gallery">Gallery</a></li>
+                    <li><a href="#" id="explorer-favorites">Favorites</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section id="site-name">
+            <h2>1. Site Name</h2>
+            <p class="bold">NASA Image Explorer - This is a gallery showcasing NASA's astronomical images and data.</p>
+            <p>I chose this name because it clearly communicates the purpose of site. The name suggests that the tool is
+                intuitive and easy to use for all users.</p>
+            <p class="italic">Optional domain availability: nasaimageexplorer.com</p>
+        </section>
+
+        <section id="site-purpose">
+            <h2>2. Site Purpose</h2>
+            <p>The NASA Image Explorer website will provide a basic educational tool. It would be an easy-to-use tool
+                for educating visitors about space exploration and celestial phenomena. The website will offer:
+            </p>
+            <ul>
+                <li>Access to NASA's collection of astronomical images</li>
+                <li>API integration with real-time NASA data</li>
+                <li>Offers interactive tools to explore cosmic wonders</li>
+                <li>Mobile-responsive design</li>
+                <li>Images filtering and search options</li>
+            </ul>
+        </section>
+
+        <section id="scenarios">
+            <h2>3. Scenarios</h2>
+            <p>These questions represent what target users might ask when visiting the site:</p>
+            <h3>Scenario 1:</h3>
+            <p class="bold">The question is from a high school science teacher:</p>
+            <p class="italic">I'm preparing a lesson about our solar system and need high-quality images of Jupiter and
+                its moons for my classroom presentation. Is there an easy way to find recent NASA images without
+                creating an account or dealing with complicated downloads?</p>
+            <p class="bold">Answer:</p>
+            <p>The Gallery page offers intuitive filtering by planet categories and provides direct access to NASA's
+                latest planetary imagery with simple download options for educational use.</p>
+
+            <h3>Scenario 2:</h3>
+            <p class="bold">The question is from a parent:</p>
+            <p class="italic">My child is fascinated by space and we want to explore amazing astronomical images
+                together. Is there a simple way to see today's featured space picture and learn something new as a
+                family?</p>
+            <p class="bold">Answer:</p>
+            <p>The home page features the Astronomy Picture of the Day with engaging explanations that make complex
+                space concepts accessible for all ages, perfect for family learning.</p>
+        </section>
+
+        <section id="color-schema">
+            <h2>4. Color Schema</h2>
+
+            <div class="color-schema primary-color">
+                Primary Color: #1A237E (Cosmic Blue)<br>
+                Usage: Primary background color
+            </div>
+
+            <div class="color-schema secondary-color">
+                Secondary Color: #0D47A1 (Deep Blue)<br>
+                Usage: Secondary elements, links
+            </div>
+
+            <div class="color-schema orange-color">
+                Orange color: #FF6D00<br>
+                Usage: Call-to-action buttons, highlights
+            </div>
+
+            <div class="color-schema white-color">
+                White color: #E8EAF6<br>
+                Usage: Card backgrounds
+            </div>
+
+            <div class="color-schema light-gray">
+                Light Color: #F8F9FA (Light Gray)<br>
+                Usage: Section backgrounds
+            </div>
+
+            <div class="color-schema dark-gray">
+                Dark Color: #333333 (Dark Gray)<br>
+                Usage: Body text
+            </div>
+        </section>
+
+        <section id="typography">
+            <h2>5. Typography</h2>
+
+            <h3>Primary Font Family: "Roboto", sans-serif</h3>
+            <p>Roboto is a clean, sans-serif font that ensures excellent readability across all devices
+                and screen sizes.</p>
+
+            <ul>
+                <li><span class="bold">Roboto, sans-serif:</span> All text elements (headings and body)</li>
+                <li><span class="bold">Font weights:</span> Normal (400) for body, Bold (700) for headings</li>
+            </ul>
+        </section>
+
+        <section id="wireframe">
+            <h2>6. Wireframe</h2>
+
+            <h3>Mobile View (320px - 768px)</h3>
+            <div class="wireframe">
+                <pre>
+┌─────────────────────────────────────┐
+│ NASA Image Explorer (Logo) [Menu ≡] │
+├─────────────────────────────────────┤
+│ Astronomy Picture of the Day        │
+├─────────────────────────────────────┤
+│    ████████████████████████████     │ 
+│    ████████████████████████████     │
+│    ████████████████████████████     │
+|                                     │
+│    Name: Portrait of NGC 1055       │  
+│    Date: 2025-11-27                 │
+│    Description: Big, beautiful      │
+│    spiral galaxy NGC 1055           │ 
+├─────────────────────────────────────┤
+│ Featured Space Images               │
+│                                     │  
+│    ████████████████████████████     │ 
+│    ████████████████████████████     │
+│    ████████████████████████████     │
+│    Name: xxxxxx                     │  
+│    Date: 2025-11-26                 │
+│    Description: xxxxxx              │
+│                                     │
+│    ┌──────────────┐                 │
+│    │ View Details │                 │  
+│    └──────────────┘                 │  
+│                                     │
+│    ████████████████████████████     │ 
+│    ████████████████████████████     │
+│    ████████████████████████████     │
+│    Name: xxxxxx                     │  
+│    Date: 2025-11-25                 │
+│    Description: xxxxxx              │
+│                                     │  
+│    ┌──────────────┐                 │  
+│    │ View Details │                 │  
+│    └──────────────┘                 │  
+│                                     │  
+│    ████████████████████████████     │ 
+│    ████████████████████████████     │
+│    ████████████████████████████     │
+│    Name: xxxxxx                     │  
+│    Date: 2025-11-24                 │
+│    Description: xxxxxx              │
+│                                     │  
+│    ┌──────────────┐                 │  
+│    │ View Details │                 │  
+│    └──────────────┘                 │  
+├─────────────────────────────────────┤
+                </pre>
+            </div>
+
+            <h3>Desktop View (1200px+)</h3>
+            <div class="wireframe">
+                <pre>
+┌───────────────────────────────────────────────────────────────────────┐
+│ NASA Image Explorer                       Home  Gallery Favorites     │
+├───────────────────────────────────────────────────────────────────────┤
+│ Astronomy Picture of the Day                                          │
+├───────────────────────────────────────────────────────────────────────┤
+│    ██████████████████████████████████████████████████████████████     │  
+│    ██████████████████████████████████████████████████████████████     │
+│    ██████████████████████████████████████████████████████████████     │
+|                                                                       │
+│    Name: Portrait of NGC 1055                                         │  
+│    Date: 2025-11-27                                                   │
+│    Description: Big, beautiful spiral galaxy NGC 1055                 │ 
+├───────────────────────────────────────────────────────────────────────┤
+│ Featured Space Images                                                 │
+├───────────────────────────────────────────────────────────────────────┤
+│  ███████████████████  │  ███████████████████  │  ███████████████████  │
+│  ███████████████████  │  ███████████████████  │  ███████████████████  │
+│  ███████████████████  │  ███████████████████  │  ███████████████████  │
+│  Name: xxxxxx         │  Name: xxxxxx         │  Name: xxxxxx         │
+│  Date: 2025-11-26     │  Date: 2025-11-25     │  Date: 2025-11-24     │
+│                       │                       │                       │
+│  ┌──────────────┐     │  ┌──────────────┐     │  ┌──────────────┐     │
+│  │ View Details │     │  │ View Details │     │  │ View Details │     │
+│  └──────────────┘     │  └──────────────┘     │  └──────────────┘     │
+└───────────────────────┴───────────────────────┴───────────────────────┘
+                </pre>
+            </div>
+
+            <h3>Page Structure Overview:</h3>
+            <ul>
+                <li><span class="bold">Home:</span> Astronomical image of the day with its details and historical images
+                    of the day.</li>
+                <li><span class="bold">Gallery:</span> Categorized browsing of images (planets, nebulae, galaxies,
+                    stars)</li>
+                <li><span class="bold">Favorites:</span> Comprehensive list with favorite space images</li>
+                <li><span class="bold">Common Elements:</span> Consistent header navigation and footer across all pages
+                </li>
+            </ul>
+        </section>
+
+        <section id="navigation">
+            <h2>7. Site Navigation</h2>
+            <ul>
+                <li><span class="bold">Header Navigation:</span> Logo + Links (Home, Gallery, Favorites)</li>
+                <li><span class="bold">Mobile Menu:</span> Hamburger menu that expands to show navigation options</li>
+                <li><span class="bold">Filter Navigation:</span> Search images and category filters</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>©<span id="currentyear"></span> 🇵🇪 🌄 🍲 Anna Karpova de Nuñez 🍲 🌄 🇵🇪 Lima, Perú</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>

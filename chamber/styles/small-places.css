@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+#cards-places div {
+    margin: 1rem 8px;
+    border: 1px solid #999;
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-areas:
+        "name"
+        "photograph"
+        "location"
+        "description";
+}
+
+#cards-places div h2 {
+    margin: 1rem 10px;
+    grid-area: name;
+}
+
+#cards-places div img {
+    width: 100%;
+    grid-area: photograph;
+}
+
+#cards-places div p {
+    margin: 1rem 10px;
+    grid-area: description;
+}
+
+#cards-places div address {
+    margin: 1rem 10px;
+    grid-area: location;
+}

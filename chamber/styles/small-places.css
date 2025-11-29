@@ -14,7 +14,8 @@
         "name"
         "photograph"
         "location"
-        "description";
+        "description"
+        "button";
 }
 
 #cards-places div h2 {
@@ -35,4 +36,18 @@
 #cards-places div address {
     margin: 1rem 10px;
     grid-area: location;
+}
+
+#cards-places div button {
+    margin: 1rem 10px;
+    grid-area: button;
+    justify-self: start;
+}
+
+/* hover effect */
+#cards-places div img:hover {
+    /*box-shadow: 0 0 50px #333;*/
+    rotate: 0.05turn;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 1px;
 }

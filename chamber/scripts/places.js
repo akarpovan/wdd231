@@ -25,6 +25,13 @@ function displayItems(places) {
         thedesc.innerText = x.description;
         thecard.appendChild(thedesc);
 
+        //<button class="learn-more" id="npBtn">Learn More</button>
+        const thebutton = document.createElement("button");
+        thebutton.id = x.id;
+        thebutton.className = "learn-more";
+        thebutton.innerText = "Learn More";
+        thecard.appendChild(thebutton);
+
         showHere.appendChild(thecard);
 
     }); //end loop

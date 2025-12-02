@@ -1,0 +1,346 @@
+:root {
+    --primary-color: #1A237E;
+    --secondary-color: #0D47A1;
+    --orange-color: #FF6D00;
+    --dark-gray: #333333;
+    --light-gray: #F8F9FA;
+    --white-color: white;
+    --background-color: #f8f9fa;
+    --heading-font: "Roboto", sans-serif;
+    --body-font: "Roboto", sans-serif;
+}
+
+/* Typography */
+body {
+    font-family: var(--body-font);
+    line-height: 1.6;
+    color: var(--dark-gray);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
+    margin-top: 0.5em;
+}
+
+h1 {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+h2 {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    background: var(--white-color);
+    margin: 20px 0;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+.site-header {
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 1rem 0;
+    margin-bottom: 0rem;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo-nasa {
+    filter: drop-shadow(0 0 8px var(--white-color)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.7));
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.site-title {
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white-color);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Navigation */
+.nav {
+    position: relative;
+}
+
+.navigation {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.navigation a {
+    color: var(--white-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    background-color: var(--orange-color);
+    border-radius: 4px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+/* Lists */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Links */
+a {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+.main {
+    padding: 1rem 0;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.hero h2 {
+    color: var(--white-color);
+    margin-bottom: 1rem;
+}
+
+/* Sections */
+section {
+    margin-bottom: 2rem;
+}
+
+section h3 {
+    color: #1a237e;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ff6d00;
+    padding-bottom: 0.5rem;
+}
+
+/* hero Section */
+.hero-container {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Grid Layouts */
+.featured-grid,
+.gallery-grid,
+.favorites-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+.date-sel {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.date-sel label {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+#date-input {
+    padding: 10px 15px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#date-input:hover,
+#date-input:focus {
+    border-color: #764ba2;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+#error {
+    background: var(--orange-color);
+    color: var(--white-color);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: none;
+}
+
+#error:not(:empty) {
+    display: block;
+}
+
+.hero-load {
+    text-align: center;
+    color: var(--white-color);
+    font-size: 1.2rem;
+    padding: 40px;
+}
+
+.hero-card h2 {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.hero-card .date {
+    color: #666;
+    font-size: 0.9rem;
+    padding: 0 30px 20px;
+    font-style: italic;
+}
+
+.hero-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 600px;
+    object-fit: contain;
+    background: #000;
+}
+
+.hero-card .explanation {
+    padding: 30px;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: #444;
+}
+
+.hero-card .copyright {
+    padding: 0 30px;
+    color: #888;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.hero-card a {
+    display: inline-block;
+    margin: 20px 30px 30px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--orange-color) 100%);
+    color: var(--white-color);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-card a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Footer */
+.footer {
+    background: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 20px;
+    margin-top: 0px;
+}
+
+.footer a {
+    color: var(--orange-color);
+    text-decoration: none;
+}
+
+.bold {
+    font-weight: bold;
+    color: var(--dark-gray);
+}
+
+.bold-h2 {
+    font-weight: bold;
+    color: var(--white-color);
+}
+
+.italic {
+    font-style: italic;
+    color: #666;
+}

@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NASA Image Explorer Homa Page</title>
+    <title>NASA Image Explorer Contact Page</title>
     <meta name="description"
-        content="Anna Karpova's NASA Image Explorer home page for the project of BYU-Idaho WDD 231 - Web Frontend Development I course that explores stunning space imagery from NASA's archives.">
+        content="Anna Karpova's NASA Image Explorer contact page for the project of BYU-Idaho WDD 231 - Web Frontend Development I course that explores stunning space imagery from NASA's archives.">
     <meta name="author" content="Anna Karpova de Nuñez">
 
     <!-- Social Media Meta Tags - Facebook Open Graph -->
@@ -24,9 +24,7 @@
 
     <script src="scripts/date.js" defer></script>
     <script src="scripts/menu.js" defer></script>
-    <script src="scripts/home.js" type="module"></script>
-
-    <!--script src="scripts/site.js" type="module" defer></script-->
+    <script src="scripts/contact.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,34 +52,7 @@
     </header>
 
     <main class="main">
-        <div class="container">
-            <section class="hero">
-                <h2>Discover the Cosmos</h2>
-                <p>Each day a different image or photograph of our fascinating universe is featured</p>
-                <!-- Date -->
-                <div class="date-sel">
-                    <label for="date-input">📅 Select a Date:</label>
-                    <input type="date" id="date-input" max="">
-                </div>
-            </section>
 
-            <section class="hero-section">
-                <h3>Astronomy Picture of the Day</h3>
-                <div id="hero-container" class="hero-container">
-                    <div class="hero-load" id="hero-load">Loading today's space image...</div>
-                </div>
-
-                <!-- Error Message -->
-                <div id="error"></div>
-            </section>
-
-            <section class="images-section">
-                <h3>Featured Space Images</h3>
-                <div id="images-container" class="images-grid">
-                    <!-- Featured images will be loaded by JavaScript -->
-                </div>
-            </section>
-        </div>
     </main>
 
     <footer class="footer">

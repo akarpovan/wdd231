@@ -1,7 +1,7 @@
 /* Larger screen styles */
 @media (min-width: 768px) {
 
-    .featured-grid,
+    .images-grid,
     .gallery-grid,
     .favorites-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -17,6 +17,15 @@
 
     .category-filter {
         flex: 1;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .images-grid,
+    .gallery-grid,
+    .favorites-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 

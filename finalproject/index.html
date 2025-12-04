@@ -20,10 +20,12 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
 
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" href="favicon.ico">
 
     <script src="scripts/date.js" defer></script>
     <script src="scripts/menu.js" defer></script>
+    <script src="scripts/modal.js" defer></script>
+    <script src="scripts/favorites.js" type="module"></script>
     <script src="scripts/home.js" type="module"></script>
 
     <!--script src="scripts/site.js" type="module" defer></script-->
@@ -56,7 +58,7 @@
     <main class="main">
         <div class="container">
             <section class="hero">
-                <h2>Discover the Cosmos</h2>
+                <h2>🌌 Discover the Cosmos</h2>
                 <p>Each day a different image or photograph of our fascinating universe is featured</p>
                 <!-- Date -->
                 <div class="date-sel">
@@ -68,19 +70,32 @@
             <section class="hero-section">
                 <h3>Astronomy Picture of the Day</h3>
                 <div id="hero-container" class="hero-container">
-                    <div class="hero-load" id="hero-load">Loading today's space image...</div>
+                    <div class="hero-load" id="hero-load">Loading space image...</div>
                 </div>
 
                 <!-- Error Message -->
-                <div id="error"></div>
+                <div id="hero-error"></div>
             </section>
 
             <section class="images-section">
                 <h3>Featured Space Images</h3>
                 <div id="images-container" class="images-grid">
-                    <!-- Featured images will be loaded by JavaScript -->
+                    <!-- 3 images will be loaded by JavaScript -->
                 </div>
+                <!-- Error Message -->
+                <div id="images-error"></div>
             </section>
+
+            <!-- Single Modal for all images -->
+            <dialog id="imagesModal" class="modal">
+                <div class="modal-content">
+                    <button class="close-modal" id="closeModal">×</button>
+                    <h2 id="modalTitle">Space Image Details</h2>
+                    <div id="modalBody">
+                        <!-- Content will be loaded by JavaScript -->
+                    </div>
+                </div>
+            </dialog>
         </div>
     </main>
 

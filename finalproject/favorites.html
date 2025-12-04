@@ -24,7 +24,8 @@
 
     <script src="scripts/date.js" defer></script>
     <script src="scripts/menu.js" defer></script>
-    <script src="scripts/favorites.js" defer></script>
+    <script src="scripts/modal.js" defer></script>
+    <script src="scripts/favorites.js" type="module"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,7 +53,32 @@
     </header>
 
     <main class="main">
+        <div class="container">
+            <h2>My Favorite Space Images</h2>
 
+            <!-- Message -->
+            <div class="empty-message" id="empty-message">
+                <p>You haven't saved any favorite images yet.</p>
+                <p>Visit the <a href="gallery.html">Gallery</a> or <a href="index.html">Home</a> to start collecting!
+                </p>
+            </div>
+
+            <!-- Favorites Images -->
+            <div id="favorites-container" class="favorites-grid">
+                <!-- Load images with JavaScript -->
+            </div>
+
+            <!-- Single Modal for all images -->
+            <dialog id="imagesModal" class="modal">
+                <div class="modal-content">
+                    <button class="close-modal" id="closeModal">×</button>
+                    <h2 id="modalTitle">Space Image Details</h2>
+                    <div id="modalBody">
+                        <!-- Content will be loaded by JavaScript -->
+                    </div>
+                </div>
+            </dialog>
+        </div>
     </main>
 
     <footer class="footer">

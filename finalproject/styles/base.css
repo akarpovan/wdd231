@@ -29,12 +29,13 @@ h4 {
     margin-top: 0.5em;
 }
 
-h1 {
+/*h1 {
     color: var(--primary-color);
     border-bottom: 3px solid var(--secondary-color);
     padding-bottom: 10px;
-}
+}*/
 
+h1,
 h2 {
     background-color: var(--secondary-color);
     color: var(--white-color);

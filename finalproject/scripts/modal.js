@@ -40,10 +40,6 @@ function closeImageModal() {
     document.getElementById('imagesModal').close();
 }
 
-/*function formatDate(dateString) {
-    return new Date(dateString).toLocaleDateString();
-}*/
-
 function formatDate(dateString) {
     return new Date(dateString + 'T00:00:00').toLocaleDateString('en-CA', {
         year: 'numeric',

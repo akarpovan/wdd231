@@ -36,13 +36,6 @@ async function getHeroImage(date = '') {
         heroContainer.innerHTML = '';
     }
 }
-/*function formatDate(dateString) {
-    return new Date(dateString + 'T00:00:00').toLocaleDateString('en-CA', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    });
-}*/
 
 function displayHeroImage(data) {
     const heroContainer = document.getElementById('hero-container');

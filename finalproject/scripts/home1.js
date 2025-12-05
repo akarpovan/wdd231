@@ -100,33 +100,6 @@ async function getSpaceImages() {
     }
 }
 
-// Display space images
-/*function displaySpaceImages(images) {
-    const imagesContainer = document.getElementById('images-container');
-
-    if (!images || images.length === 0) {
-        imagesContainer.innerHTML = '<p>No images available</p>';
-        return;
-    }
-
-    imagesContainer.innerHTML = images.map(image => `
-        <div class="images-card">
-            <img src="${image.url}" alt="${image.title}" loading="lazy">
-            <h4><span class="bold-h2">Title:</span> ${image.title}</h4>
-            <p class="date"><span class="bold">Date:</span> ${formatDate(image.date)}</p>
-            <button onclick="addToFavorites(${JSON.stringify(image).replace(/"/g, '&quot;')})" id="favorite-button">
-                ❤️ Add to Favorites
-            </button>
-            <!--button onclick="openModal(${JSON.stringify(image).replace(/"/g, '&quot;')})" id="view-button">
-                🔍 View Details
-            </button-->
-            <button onclick="openImageModal('${image.url}', '${image.title.replace(/'/g, "\\'")}', '${image.date}', '${image.explanation.replace(/'/g, "\\'")}', '${image.hdurl || image.url}')" class="view-button">
-                🔍 View Details
-            </button>
-        </div>
-    `).join('');
-}*/
-
 function displaySpaceImages(images) {
     const imagesContainer = document.getElementById('images-container');
 
@@ -138,16 +111,6 @@ function displaySpaceImages(images) {
     let html = '';
     for (let i = 0; i < images.length; i++) {
         const image = images[i];
-
-        // Limpiar el texto para que no rompa el onclick
-        //const imageTitle = image.title.replace(/'/g, "\\'");
-        //const imageExplanation = image.explanation.replace(/'/g, "\\'");
-        //const imageTitle = cleanText(image.title);
-        //const imageExplanation = cleanText(image.explanation);
-
-        //quitar apostrofes
-        //const imageTitle = image.title.replace(/'/g, '');
-        //const imageExplanation = image.explanation.replace(/'/g, '');
 
         const imageTitle = '';
         const imageExplanation = '';

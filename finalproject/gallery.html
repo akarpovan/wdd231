@@ -25,7 +25,7 @@
     <script src="scripts/date.js" defer></script>
     <script src="scripts/menu.js" defer></script>
     <script src="scripts/modal.js" defer></script>
-    <script src="scripts/favorites.js" defer></script>
+    <script src="scripts/favorites.js" type="module"></script>
     <script src="scripts/gallery.js" type="module"></script>
 
 
@@ -55,7 +55,38 @@
     </header>
 
     <main class="main">
+        <div class="container">
+            <h2>Space Image Gallery</h2>
 
+            <div class="filter">
+                <input type="text" id="search-input" placeholder="Search images..." class="search-input">
+                <select id="category" class="category">
+                    <option value="all">All Categories</option>
+                    <option value="planet">Planets</option>
+                    <option value="galaxy">Galaxies</option>
+                    <option value="nebula">Nebulae</option>
+                    <option value="star">Stars</option>
+                </select>
+            </div>
+
+            <div id="gallery-container" class="gallery-grid">
+                <div class="gallery-load">Loading space images...</div>
+            </div>
+
+            <!-- Error Message -->
+            <div id="gallery-error"></div>
+
+            <!-- Single Modal for all images -->
+            <dialog id="imagesModal" class="modal">
+                <div class="modal-content">
+                    <button class="close-modal" id="closeModal">×</button>
+                    <h2 id="modalTitle">Space Image Details</h2>
+                    <div id="modalBody">
+                        <!-- Content will be loaded by JavaScript -->
+                    </div>
+                </div>
+            </dialog>
+        </div>
     </main>
 
     <footer class="footer">

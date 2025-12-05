@@ -1,4 +1,3 @@
-// favorites-utils.js
 export function addToFavorites(image) {
     try {
         const favorites = JSON.parse(localStorage.getItem('nasaFavorites')) || [];

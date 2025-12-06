@@ -100,7 +100,7 @@ function displaySpaceImages(images) {
     container.innerHTML = images.map((image, index) => `
         <div class="images-card">
             <img src="${image.url}" alt="${image.title}" loading="lazy">
-            <h4><span class="bold-h2">Title:</span> ${image.title}</h4>
+            <h4>${image.title}</h4>
             <p class="date"><span class="bold">Date:</span> ${formatDate(image.date)}</p>
             <div class="card-buttons">
                 <button class="view-button" data-index="${index}">

@@ -147,7 +147,7 @@ function displayGalleryImages(images) {
     container.innerHTML = images.map((image, index) => `
         <div class="images-card">
             <img src="${image.url || image.hdurl}" alt="${image.title}" loading="lazy">
-            <h4><span class="bold-h2">Title:</span> ${image.title}</h4>
+            <h4>${image.title}</h4>
             <p class="date"><span class="bold">Date:</span> ${formatDate(image.date)}</p>
             <p class="category"><span class="bold">Category:</span> ${image.category}</p>
             <div class="card-buttons">

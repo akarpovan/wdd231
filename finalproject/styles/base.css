@@ -2,6 +2,7 @@
     --primary-color: #1A237E;
     --secondary-color: #0D47A1;
     --orange-color: #FF6D00;
+    --contrast-orange-color: #080808;
     --dark-gray: #333333;
     --light-gray: #F8F9FA;
     --white-color: white;
@@ -298,7 +299,7 @@ section h3 {
 
 .hero-card .copyright {
     padding: 0 30px;
-    color: #888;
+    color: #525252;
     font-size: 0.9rem;
     font-style: italic;
 }
@@ -344,7 +345,7 @@ section h3 {
 
 .images-card button {
     background: var(--orange-color);
-    color: var(--white-color);
+    color: var(--contrast-orange-color);
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -463,7 +464,7 @@ section h3 {
 .remove-button,
 .view-favorite-button {
     background: var(--primary-color);
-    color: var(--white-color);
+    color: var(--contrast-orange-color);
     border: none;
     padding: 8px 16px;
     border-radius: 5px;
@@ -623,7 +624,7 @@ section h3 {
 
 .submit-button {
     background: #ff6d00;
-    color: var(--white-color);
+    color: var(--contrast-orange-color);
     border: none;
     padding: 1rem 2rem;
     border-radius: 4px;

@@ -25,6 +25,7 @@
     <script src="scripts/date.js" defer></script>
     <script src="scripts/menu.js" defer></script>
     <script src="scripts/contact.js" defer></script>
+    <script src="scripts/contact-action.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,44 +54,16 @@
 
     <main class="main">
         <div class="container">
-            <h1>Contact Us</h1>
+            <h1>Thank You for Your Message!</h1>
+            <div class="thank-message">
+                <h3>We have received your message and will contact you.</h3>
 
-            <form action="contact-action.html" method="get" class="contact-action">
-                <div class="frm-grp">
-                    <label for="name">Full Name:</label>
-                    <input type="text" id="name" name="name" required minlength="2">
+                <div id="frm-data" class="frm-data">
+                    <!-- registered data  -->
                 </div>
 
-                <div class="frm-grp">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="frm-grp">
-                    <label for="sel-subject">Subject:</label>
-                    <select id="sel-subject" name="sel-subject" required>
-                        <option value="">Select a subject...</option>
-                        <option value="sel-quest">General Question</option>
-                        <option value="sel-sug">Feature Suggestion</option>
-                        <option value="sel-bug">Report a Bug</option>
-                        <option value="sel-other">Other</option>
-                    </select>
-                </div>
-
-                <div class="frm-grp">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required minlength="10"></textarea>
-                </div>
-
-                <div class="frm-grp">
-                    <label>
-                        <input type="checkbox" name="newsletter" value="yes">
-                        Subscribe to space image updates
-                    </label>
-                </div>
-
-                <button type="submit" class="submit-button">Send Message</button>
-            </form>
+                <a href="index.html" class="home-button">Return to Home</a>
+            </div>
         </div>
     </main>
 
